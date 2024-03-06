@@ -189,6 +189,8 @@ mjx-container[display="true"] + br {
     
       <a class="main-nav-link" href="/about">About</a>
     
+      <a class="main-nav-link" href="/Sol">Sol</a>
+    
   </nav>
   <nav id="sub-nav">
     <a id="theme-btn" class="nav-icon">
@@ -213,6 +215,8 @@ mjx-container[display="true"] + br {
       <a class="nav-dropdown-link" href="/archives">Archives</a>
     
       <a class="nav-dropdown-link" href="/about">About</a>
+    
+      <a class="nav-dropdown-link" href="/Sol">Sol</a>
     
     
       <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
@@ -273,6 +277,170 @@ mjx-container[display="true"] + br {
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-反悔贪心" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/03/06/%E5%8F%8D%E6%82%94%E8%B4%AA%E5%BF%83/">无标题</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-03-06T13:29:31.722Z" itemprop="datePublished">2024-03-06</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            6.2k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              好神奇！ 学的起因是由于方队放的每日一题里有
+P4053 [JSOI2007] 建筑抢修。然后发现 Scene
+在做。所以来学一下。 借由题目来分析。 ## P4053 JSOI 2007 建筑抢修
+反悔贪心，顾名思义，就是根据贪心策略贪心，贪完了还可以找更优解反悔的一种算法。
+好像有点像退火之类的。 目前做到的一类题目是运用优先队列。
+这道题的题意就是 接下来 
+行，每行两个整数 ,  描述一个建筑：修理这个建筑需要  ​ 秒，如果在 
+秒之内还没有修理完成，这个建筑就报废了。 输出一个整数 ，表示最多可以抢修  个建筑。 1234567891011121314151617181920212223242526272829303132333435#include&lt;bits/stdc++.h&gt;#define int long long#define pb push_back#define mp make_pairnamespace IO {    #define int long long	#define gh getchar    inline int ...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/03/06/%E5%8F%8D%E6%82%94%E8%B4%AA%E5%BF%83/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+   
+
+
+<article id="post-每日一题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2024/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">无标题</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-03-06T13:29:20.179Z" itemprop="datePublished">2024-03-06</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            507 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              day1
+NOIP2015 充满了希望
+(并不是 NOIP 2015 的题) 大概题意就是给你  个数的序列， 个操作，然后每次问你（ 次）从零开始执行区间  之间的操作后，所有 3
+操作的结果之和。
+1 x y：将序列位置为 x,y
+的两个元素交换。
+2 l r x：将序列区间  内所有元素修改为
+x。
+3 x：查询序列 x 位置的值。
+数据范围 。考虑消除前面的操作会对后面的操作有什么影响。
+如果用莫队的思路（虽然肯定 T），消除 1 操作就是再进行一次
+1 操作。 感觉假了。 注意到只有最后一次对  的操作才会影响  的取值。 于是如何找到最后一次对  的操作呢？
+想到了开一棵线段树，然后从头到尾跑一遍上述操作。 记数组
+pre[i] 为最近一次操作第  次 3 操作的 。 那么对于每次询问，求的就是满足
+pre[i] &gt; l 且 pos[i] &lt; r 的值之和。
+这个就是二维偏序，用树状数组做一下就好了。 还是对着题解调了一下/kk 甚至
+pushdown 的时候没有下传标记，鉴定为树剖打少了。
+P4053 JSOI2007 ...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2024/03/06/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
    
 
 
@@ -369,94 +537,6 @@ SDOI2008 仪仗队
     <a class="right-panel  non-pic  "
       
       href="/2024/03/02/%E6%95%B0%E8%AE%BA/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-   
-
-
-<article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2024/03/02/hello-world/">Hello World</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2024-03-02T05:56:15.373Z" itemprop="datePublished">2024-03-02</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-    未分类 
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            367 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Welcome to Hexo! This is your very
-first post. Check documentation for
-more info. If you get any problems when using Hexo, you can find the
-answer in troubleshooting or
-you can ask me on GitHub.
-Quick Start
-Create a new post
-1$ hexo new "My New Post"
-More info: Writing
-Run server
-1$ hexo server
-More info: Server
-Generate static files
-1$ hexo generate
-More info: Generating
-Deploy to remote sites
-1$ hexo deploy
-More info: Deployment
-
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2024/03/02/hello-world/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
